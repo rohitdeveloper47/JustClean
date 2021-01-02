@@ -4,6 +4,8 @@ import com.dashboard.justclean.data.datasource.DataSource
 
 class UserRepository (private val dataSource: DataSource) {
 
-    suspend fun getUsers() =  dataSource.getUsers()
+    suspend fun getUserList() =  dataSource.getUserList()
+
+    suspend fun getPostComment(id:Int) =  dataSource.getPostComment(id)
 
 }

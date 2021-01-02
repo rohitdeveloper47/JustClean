@@ -10,6 +10,7 @@ import com.dashboard.justclean.ui.fragment.PostFragment
 class HomeActivity : AppCompatActivity(){
     protected var appToolbar: Toolbar? = null
     protected var toobarTitle: TextView? = null
+    //private val dataBaseViewModel = DataBaseViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_activity)

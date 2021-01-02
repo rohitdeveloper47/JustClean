@@ -5,14 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dashboard.justclean.R
-import com.dashboard.justclean.data.Model.PostItem
+import com.dashboard.justclean.database.table.TableFavourite
 import kotlinx.android.synthetic.main.row_post_item.view.*
 
-class PostAdapter(var list: List<PostItem>, var itemClick:RecycleItemClick):RecyclerView.Adapter<PostAdapter.ViewHolder>() {
+class FavouritAdapter(var list: List<TableFavourite>, var itemClick:RecycleItemClick): RecyclerView.Adapter<FavouritAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-      return  ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.row_post_item,parent,
+        return  ViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.row_post_item,parent,
                 false)
         )
 
@@ -43,6 +44,6 @@ class PostAdapter(var list: List<PostItem>, var itemClick:RecycleItemClick):Recy
     }
 
     interface RecycleItemClick {
-        fun onItemClick(item: PostItem)
+        fun onItemClick(item: TableFavourite)
     }
 }
