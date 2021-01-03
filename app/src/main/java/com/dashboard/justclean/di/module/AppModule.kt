@@ -18,7 +18,6 @@ val ApplicationModule = module {
     single { provideRetrofit(get(), URLFactory.BASE_URL) }
     single { provideApiService(get()) }
     single { provideNetworkHelper(androidContext()) }
-
     single<DataSource> {
         return@single DataSourceImp(get())
     }

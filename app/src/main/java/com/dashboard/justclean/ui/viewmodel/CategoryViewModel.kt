@@ -1,6 +1,5 @@
 package com.dashboard.justclean.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,7 +12,6 @@ import com.dashboard.justclean.data.repository.UserRepository
 import kotlinx.coroutines.launch
 
 class CategoryViewModel(private val userRepository: UserRepository,private val networkHelper: NetworkHelper) : ViewModel() {
-
     private val _postItem = MutableLiveData<ResponseBody<List<PostItem>>>()
     private val _commentItem = MutableLiveData<ResponseBody<List<PostComment>>>()
 
