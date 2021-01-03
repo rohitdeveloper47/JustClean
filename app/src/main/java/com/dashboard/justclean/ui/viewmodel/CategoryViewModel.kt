@@ -20,11 +20,7 @@ class CategoryViewModel(private val userRepository: UserRepository,private val n
     val commentItem:LiveData<ResponseBody<List<PostComment>>>
     get() = _commentItem
 
-    init {
-        fectchPost()
-    }
-
-   private fun fectchPost() {
+    fun fectchPost() {
         viewModelScope.launch {
 
             if (networkHelper.isNetworkConnected()) {
@@ -42,7 +38,7 @@ class CategoryViewModel(private val userRepository: UserRepository,private val n
 
     fun addToFavourite(id: Int,userId:Int){
 
-
+            //Call API
 
     }
 

@@ -37,6 +37,7 @@ class PostItemFragment : Fragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        categoryViewModel.fectchPost()
         observeList()
 
     }
@@ -50,7 +51,7 @@ class PostItemFragment : Fragment(){
                     it.data?.let { list ->
 
                         setUpRecyclerView(list)
-                        // databaseModel.insertData(list)
+                       
                     }
 
 
